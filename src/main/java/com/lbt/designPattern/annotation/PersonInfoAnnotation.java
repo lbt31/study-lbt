@@ -1,6 +1,6 @@
 package com.lbt.designPattern.annotation;
 
-import demo.pattern.factory.entity.Mouse;
+import com.lbt.designPattern.pattern.factory.entity.Mouse;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

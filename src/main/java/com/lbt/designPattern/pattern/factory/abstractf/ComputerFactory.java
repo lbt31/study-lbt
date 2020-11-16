@@ -1,7 +1,7 @@
 package com.lbt.designPattern.pattern.factory.abstractf;
 
-import demo.pattern.factory.entity.Keyboard;
-import demo.pattern.factory.entity.Mouse;
+import com.lbt.designPattern.pattern.factory.entity.Keyboard;
+import com.lbt.designPattern.pattern.factory.entity.Mouse;
 
 public interface ComputerFactory {
     Mouse createMouse();

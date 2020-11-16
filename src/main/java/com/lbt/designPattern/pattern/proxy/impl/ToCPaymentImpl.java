@@ -1,6 +1,6 @@
 package com.lbt.designPattern.pattern.proxy.impl;
 
-import demo.pattern.proxy.ToCPayment;
+import com.lbt.designPattern.pattern.proxy.ToCPayment;
 
 /**
  * @Author LiBiTong

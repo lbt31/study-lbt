@@ -1,14 +1,9 @@
 package com.lbt.designPattern.pattern.proxy;
 
-import demo.pattern.proxy.cglib.AlipayMethodInterceptor;
-import demo.pattern.proxy.cglib.CglibDynamicProxyUtil;
-import demo.pattern.proxy.impl.ToBPaymentImpl;
-import demo.pattern.proxy.impl.ToCPaymentImpl;
-import demo.pattern.proxy.jdkproxy.AlipayInvocationHandler;
-import demo.pattern.proxy.jdkproxy.JdkDynamicProxyUtil;
+import com.lbt.designPattern.pattern.proxy.cglib.AlipayMethodInterceptor;
+import com.lbt.designPattern.pattern.proxy.cglib.CglibDynamicProxyUtil;
 import net.sf.cglib.proxy.MethodInterceptor;
 
-import java.lang.reflect.InvocationHandler;
 
 /**
  * @Author LiBiTong

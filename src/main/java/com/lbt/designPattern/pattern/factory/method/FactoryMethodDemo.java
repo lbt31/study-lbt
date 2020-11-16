@@ -1,6 +1,6 @@
 package com.lbt.designPattern.pattern.factory.method;
 
-import demo.pattern.factory.entity.Mouse;
+import com.lbt.designPattern.pattern.factory.entity.Mouse;
 
 public class FactoryMethodDemo {
     public static void main(String[] args) {

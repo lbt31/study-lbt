@@ -1,9 +1,9 @@
 package com.lbt.designPattern.pattern.factory.abstractf;
 
-import demo.pattern.factory.entity.DellKeyboard;
-import demo.pattern.factory.entity.DellMouse;
-import demo.pattern.factory.entity.Keyboard;
-import demo.pattern.factory.entity.Mouse;
+import com.lbt.designPattern.pattern.factory.entity.DellKeyboard;
+import com.lbt.designPattern.pattern.factory.entity.DellMouse;
+import com.lbt.designPattern.pattern.factory.entity.Keyboard;
+import com.lbt.designPattern.pattern.factory.entity.Mouse;
 
 public class DellComputerFactory implements ComputerFactory {
     @Override

@@ -1,6 +1,6 @@
 package com.lbt.designPattern.pattern.factory.entity;
 
-import demo.annotation.TestAnnotation;
+import com.lbt.designPattern.annotation.TestAnnotation;
 
 public class HpMouse  implements Mouse {
     @Override

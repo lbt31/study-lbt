@@ -1,9 +1,9 @@
 package com.lbt.designPattern.pattern.factory.abstractf;
 
-import demo.pattern.factory.entity.Keyboard;
-import demo.pattern.factory.entity.LenovoKeyboard;
-import demo.pattern.factory.entity.LenovoMouse;
-import demo.pattern.factory.entity.Mouse;
+import com.lbt.designPattern.pattern.factory.entity.Keyboard;
+import com.lbt.designPattern.pattern.factory.entity.LenovoKeyboard;
+import com.lbt.designPattern.pattern.factory.entity.LenovoMouse;
+import com.lbt.designPattern.pattern.factory.entity.Mouse;
 
 public class LenovoComputerFactory implements ComputerFactory {
     @Override
