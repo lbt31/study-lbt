@@ -17,14 +17,82 @@ package com.lbt.算法.链表.删除链表倒数第N个节点;
 public class Solution {
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1,new ListNode(2, new ListNode(4,new ListNode(5,new ListNode(6,null)))));
-        ListNode re = removeNthFromEnd(l1,2);
-        System.out.println(re);
+        ListNode re = removeNthFromEnd(l1,5);
+        while (re!=null){
+            System.out.print(re.val+"  ");
+            re = re.next;
+        }
     }
     public static ListNode removeNthFromEnd(ListNode head, int n) {
 
-        return null;
+        ListNode result = new ListNode();
+        result.next = head;
+        ListNode pre = result;
+        int i = 1;
+        while(head !=null){
+            if (i>n){
+                pre = pre.next;
+            }
+            head = head.next;
+            i++;
+        }
+        pre.next = pre.next.next;
+        return result.next;
+
+
+        //保存初始值
+       /* ListNode result = new ListNode();
+        result.next = head;
+        //前置指针
+        ListNode pre = new ListNode();
+        //后置指针
+        ListNode cur = result;
+        int i = 1;
+        while(head !=null){
+            if (i>=n){
+                pre = cur;
+                cur = cur.next;
+            }
+            head = head.next;
+            i++;
+        }
+        pre.next = pre.next.next;
+        return result.next;*/
+        /**
+         *  ListNode cur = head;
+         *         ListNode result = head;
+         *         int i = 1;
+         *         while(result !=null){
+         *             if (i>=n){
+         *                 cur = cur.next;
+         *             }
+         *             i++;
+         *             result = result.next;
+         *         }
+         *         cur.next = cur.next.next;
+         *         return cur;
+         */
 
     }
+    /**
+     * func removeNthFromEnd(head *ListNode, n int) *ListNode {
+     *     result := &ListNode{}
+     *     result.Next = head
+     *     var pre *ListNode
+     *     cur := result
+     *     i := 1
+     *     for head != nil {
+     *         if i >= n {
+     *             pre = cur
+     *             cur = cur.Next
+     *         }
+     *         head = head.Next
+     *         i++
+     *     }
+     *     pre.Next = pre.Next.Next
+     *     return result.Next
+     * }
+     */
 }
 
 class ListNode {
