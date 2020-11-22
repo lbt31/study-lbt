@@ -22,9 +22,13 @@ public class Solution {
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1,new ListNode(2, new ListNode(4,null)));
         ListNode l2 = new ListNode(1,new ListNode(3,new ListNode(4,null)));
-        ListNode re = mergeTwoLists(l1,l2);
-        System.out.println(re);
+        ListNode re = mergeTwoLists_1(l1,l2);
+        while (re.next!=null){
+            System.out.print(re.val+"  ");
+            re = re.next;
+        }
     }
+    //非递归算法
     public static ListNode  mergeTwoLists(ListNode l1, ListNode l2) {
         //首先定义一个哨兵
         ListNode prehead  = new ListNode(-1);
@@ -49,6 +53,27 @@ public class Solution {
             prehead.next = l1;
         }
         return cur.next;
+    }
+
+
+    /**
+     * 递归方法
+     * @param l1
+     * @param l2
+     * @return
+     */
+    public static ListNode mergeTwoLists_1(ListNode l1, ListNode l2) {
+        if (l1==null) return l2 ;
+        if (l2==null) return l1 ;
+
+        if (l1.val<l2.val) {
+            l1.next = mergeTwoLists(l1.next,l2) ;
+            return l1 ;
+        }else {
+            l2.next = mergeTwoLists(l1,l2.next) ;
+            return  l2 ;
+        }
+
     }
 }
 
