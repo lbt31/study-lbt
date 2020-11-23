@@ -1,97 +1,57 @@
 package com.lbt.collection;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @Author LiBiTong
  * @Description
- * @Date 2020/11/22 14:55
+ * @Date 2020/11/23 22:32
  */
 public class Main {
+
     /**
-     * Given an m x n 2d grid map of '1's (land) and '0's (water), return the number of islands which the sum of 1‘s on the island equal S (S>0).
-     * An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically.
-     * You may assume all four edges of the grid are all surrounded by water.
-     * Example 1:
-     * Input: grid = [
-     * ["1","1","1","1","0"],
-     *   ["1","1","0","1","0"],
-     *   ["1","1","0","0","0"],
-     *   ["0","0","0","0","0"]
-     * ], S = 9
-     * Output: 1
-     * public int sumIslands(char[][] grid, int S){
-     *     // implementation
-     * }
-     * //----------
-     * // unit test
-     * //----------
-     * Tip: using Junit4.
-     * public void sumIslandsTest(){
-     *     char[][] grid = [
-     *     ["1","1","1","1","0"],
-     *     ["1","1","0","1","0"],
-     *     ["1","1","0","0","0"],
-     *     ["0","0","0","0","0"]
-     *     ];
-     *     int S = 8;
-     *     // test implementation
-     * }
+     * 编写一个函数,寻找一个正整数x,他的平方最接近正整数y。
+     * 输入y，找到一个数x，x的平方接近y
      */
-    public static void main(String[] args) {
-        sumIslandsTest();
-    }
-    public static void sumIslandsTest(){
-        char[][] grid = {
-            {'1', '1', '1', '1', '0'},
-            {'1', '1', '0', '1', '0'},
-            {'1', '1', '0', '0', '0'},
-            {'0', '0', '0', '0', '0'}
-        };
-        int S = 8;
-        // test implementation
-        System.out.printf("岛屿面积为%s的岛屿有%s个",S,numIslands(grid,S));
-    }
-
-    private static Integer num=0;
-
-    public static int numIslands(char[][] grid,int S) {
-        int landNum = 0;
-        int result = 0;
-        List<Integer> f = new ArrayList<>();
-        for(int i = 0; i < grid.length; i++){
-            for(int j = 0; j < grid[0].length; j++){
-                if(grid[i][j] == '1'){
-                    int infect = infect(grid, i, j);
-                    f.add(infect);
-                    landNum++;
-                    num = 0;
+    public static int  find(int y){
+        int low = 1;
+        int high = y;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            // int product = mid * mid;   越界
+            int t = y / mid;
+            if (t == mid) {
+                if (y % mid == 0) {
+                    return t;
                 }
-            }
-        }
-        //遍历数组
-        for (int a : f){
-            if (a == S){
-                result+=1;
+                low = mid + 1;
+            } else if (t < mid) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
             }
         }
 
-        return result;
+        return false;
     }
 
-    public static int infect(char[][] grid, int i, int j){
-        if(i < 0 || i >= grid.length ||
-                j < 0 || j >= grid[0].length || grid[i][j] != '1'){
-            return 0;
+    //给定一个正整数 num，编写一个函数，如果 num 是一个完全平方数，则返回 True，否则返回 False。
+    public boolean isPerfectSquare(int num) {
+        int low = 1;
+        int high = num;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            // int product = mid * mid;   越界
+            int t = num / mid;
+            if (t == mid) {
+                if (num%mid == 0) return true;
+                low = mid + 1;
+            } else if (t < mid) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
         }
-        grid[i][j] = '2';
-        num++;
-        infect(grid, i + 1, j);
-        infect(grid, i - 1, j);
-        infect(grid, i, j + 1);
-        infect(grid, i, j - 1);
-        return num;
+
+        return false;
     }
 
 }
