@@ -16,6 +16,7 @@ import java.util.Arrays;
 public class QuickSort {
 
     public static void main(String[] args) {
+
         int[] arr = new int[]{5,2,1,4,6,7};
         quickSort(arr);
         System.out.println(Arrays.toString(arr));
@@ -65,6 +66,9 @@ public class QuickSort {
         }
         return privot;
     }
+
+
+
 
     private static int partition_1(int[] arr, int left, int right) {
         //选取中轴元素

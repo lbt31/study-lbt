@@ -17,7 +17,7 @@ package com.lbt.算法.链表.删除链表倒数第N个节点;
 public class Solution {
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1,new ListNode(2, new ListNode(4,new ListNode(5,new ListNode(6,null)))));
-        ListNode re = removeNthFromEnd(l1,5);
+        ListNode re = removeNthFromEnd(l1,1);
         while (re!=null){
             System.out.print(re.val+"  ");
             re = re.next;

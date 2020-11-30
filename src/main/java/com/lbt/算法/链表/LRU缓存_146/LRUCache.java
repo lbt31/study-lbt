@@ -91,7 +91,7 @@ public class LRUCache {
             map.remove(key);
         }
         //判断缓存是否够
-        if (map.size()<= cap){
+        if (map.size()== cap){
             //不够则移除最少使用的
             Iterator<Map.Entry<Integer, Integer>> iterator = map.entrySet().iterator();
             iterator.next();
