@@ -1,5 +1,7 @@
 package com.lbt.算法.链表.删除链表倒数第N个节点;
 
+import com.lbt.算法.链表.ListNode;
+
 /**
  * @Author LiBiTong
  * @Description
@@ -95,10 +97,3 @@ public class Solution {
      */
 }
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}

@@ -1,5 +1,7 @@
 package com.lbt.算法.链表.合并两个有序链表_21;
 
+import com.lbt.算法.链表.ListNode;
+
 import java.util.List;
 
 /**
@@ -77,10 +79,3 @@ public class Solution {
     }
 }
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}

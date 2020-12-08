@@ -1,6 +1,8 @@
 package com.lbt.算法.链表.环形链表_142;
 
 
+import com.lbt.算法.链表.ListNode;
+
 import java.util.HashMap;
 
 /**
@@ -83,12 +85,4 @@ public class Solution {
 
 
 
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
