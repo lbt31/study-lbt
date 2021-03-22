@@ -1,6 +1,8 @@
-package com.lbt.collection;
+package com.lbt.算法.滑动窗口.平方最接近正整数的值;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 /**
  * @Author LiBiTong
