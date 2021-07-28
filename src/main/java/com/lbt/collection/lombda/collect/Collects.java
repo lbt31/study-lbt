@@ -44,7 +44,7 @@ public class Collects {
     }
 
     @Data
-    @AllArgsConstructor
+    @AllArgsConstructor 
     @NoArgsConstructor
     public static class Sbu{
         private Boolean f;
