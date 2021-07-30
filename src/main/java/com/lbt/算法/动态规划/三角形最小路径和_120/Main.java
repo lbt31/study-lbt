@@ -25,7 +25,7 @@ import java.util.List;
  * 定义状态
  * 总结状态转移方程
  * 分析状态转移方程不能满足的特殊情况。
- * 得到最终解
+ * 得到最终解：result = min(dp[l-1,0]，dp[l-1,1]，dp[l-1,2]....)
  */
 public class Main {
 
@@ -52,7 +52,7 @@ public class Main {
             return triangle.get(0).get(0);
         }
         int[][] dp = new int[triangle.size()+1][triangle.size()+1];
-        //因为三角形从上到下会有边界问题，int[1][0]的上元素存在上左元素不存在
+        //因为三角形从上到下会有边界问题，int[1][0]的上元素存在上左元素不存在，把三角形倒过来
         for (int i =triangle.size()-1;i>=0;i--){
             List<Integer> cur = triangle.get(i);
             for (int j=0;j<cur.size();j++){

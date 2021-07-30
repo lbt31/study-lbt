@@ -19,6 +19,7 @@ package com.lbt.算法.动态规划.最长上升子序列_300;
  *
  *
  * 解题思路： 用一个数组将一一对应下标记录他值前有几个小于他的数
+ * dp[i] = max(dp[j]+1，dp[k]+1，dp[p]+1，.....)
  */
 public class Main {
     public static void main(String[] args) {
